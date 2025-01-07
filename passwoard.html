@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4A90E2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Enter Your Password</h2>
+        <form id="passwordForm">
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="error" id="errorMessage"></div>
+    </div>
+
+    <script>
+        // Password to check
+        const correctPassword = "1234";  // Example password
+
+        // Get the form and error message elements
+        const passwordForm = document.getElementById("passwordForm");
+        const errorMessage = document.getElementById("errorMessage");
+
+        // Handle the form submission
+        passwordForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            const enteredPassword = document.getElementById("password").value;
+
+            if (enteredPassword === correctPassword) {
+                // Redirect to the details page when the password is correct
+                window.location.href = "onlinee.html"; // You can change the filename to whatever you want
+            } else {
+                // Show error message if password is incorrect
+                errorMessage.textContent = "Incorrect password. Please try again.";
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Portfolio</title>
+    <style>
+        /* Basic CSS for styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Light gray background */
+            color: #333; /* Dark text color for readability */
+        }
+
+        header {
+            background-color: #4A90E2; /* Soft blue background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Navigation bar style */
+        nav {
+            text-align: center;
+            background-color: #333; /* Dark background for the navigation */
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover for better UX */
+        }
+
+        /* Section style */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* Skills Section */
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skills div, .projects div {
+            background-color: white; /* White cards for each skill/project */
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            width: 45%;
+        }
+
+        .skills div h3, .projects div h3 {
+            color: #4A90E2; /* Soft blue headings */
+        }
+
+        .projects div a {
+            color: #4A90E2; /* Soft blue for project links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .projects div a:hover {
+            text-decoration: underline; /* Underline on hover for links */
+        }
+
+        /* Footer Style */
+        footer {
+            background-color: #333; /* Dark background for footer */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Contact section link style */
+        #contact a {
+            color: #4A90E2; /* Soft blue for email link */
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Vemula Purna Vijya Sai Phani Kumar</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="D:\phani23\my\about.html">About Me</a>
+        
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm V.PHANI KUMAR, a passionate web developer with experience in HTML, CSS, JavaScript, and more. I enjoy creating beautiful, functional websites and web applications that provide great user experiences.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div>
+                <h3>HTML</h3>
+                <p>Expert in creating structured and semantic web pages.</p>
+            </div>
+            <div>
+                <h3>CSS</h3>
+                <p>Skilled in styling and making websites visually appealing.</p>
+            </div>
+            <div>
+                <h3>JavaScript</h3>
+                <p>Experienced in adding interactivity and dynamic content to websites.</p>
+            </div>
+            <div>
+                <h3>React</h3>
+                <p>Knowledgeable in building interactive user interfaces with React.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div>
+                <h3>Project 1</h3>
+                <p>A brief description of your project. It could be a website, a web app, or any other development project you've worked on.</p>
+                <a href="https://www.youtube.com/">View Project</a>
+            </div>
+            <div>
+                <h3>Project 2</h3>
+                <p>Description of another project you worked on. Highlight the technologies and your role in the project.</p>
+                <a href="https://www.flipkart.com/">View Project</a>
+            </div>
+            <div>
+                <h3>Project 3</h3>
+                <p>A third project description. Include links to GitHub repositories or live sites if available.</p>
+                <a href="https://chatgpt.com/">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch with me, feel free to reach out via email or through the links below.</p>
+        <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 V.PHANI KUMAR. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll functionality
+        const links = document.querySelectorAll('nav a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1); // Remove the '#' symbol
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
